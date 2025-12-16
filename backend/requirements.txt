@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pytesseract
+opencv-python
+pdf2image
+sentence-transformers
+faiss-cpu
+python-dateutil
+regex
+pydantic
+python-dotenv
+aiofiles
