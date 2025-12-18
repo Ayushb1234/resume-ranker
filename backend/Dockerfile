@@ -19,10 +19,9 @@
 
 # CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
+FROM pytorch/pytorch:2.1.0-cpu
 
-FROM pytorch/pytorch:2.1.0-cpu as base
-
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     tesseract-ocr \
     poppler-utils \
     libgl1 \
