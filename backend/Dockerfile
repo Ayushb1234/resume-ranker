@@ -18,8 +18,7 @@
 # EXPOSE 8000
 
 # CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-FROM pytorch/pytorch:2.1.0-cpu
+FROM pytorch/pytorch:2.1.2-cpu-py3.10
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     tesseract-ocr \
@@ -36,4 +35,5 @@ COPY app ./app
 
 EXPOSE 8000
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]
+
 
